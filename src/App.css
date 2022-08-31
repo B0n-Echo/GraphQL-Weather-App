@@ -60,7 +60,7 @@ main {
   margin: 0px 10px 10px 0px;
   float: left;
 	border-radius: 10px;
-	/* font-family: 'Pacifico', cursive; */
+	font-family: 'Pacifico', cursive;
 	font-size: 15px;
 	color: #FFF;
 	text-decoration: none;	
@@ -80,4 +80,42 @@ main {
 	transform: translate(0px,5px);
   -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;
+}
+
+.location-box .location {
+  color: #FFF;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+
+.weather-box {
+  text-align: center;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+
+  padding: 15px 25px;
+
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 900;
+
+  text-shadow: 3px 4px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: #FFF;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }

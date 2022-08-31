@@ -29,19 +29,25 @@ function Home() {
       </div>
       <button  class="action-button shadow animate green" onClick={() => getWeather()}> Search</button>
       <div className="weather">
-        {data && (
-          <>
-            <h1> {data.getCityByName.name} </h1>
-            <h1>
+        {data && data?.getCityByName ? (
+          <> 
+          <div className="location-box">
+            <div className="location"> {data?.getCityByName?.name} </div>
+          </div>
+            <div className="weather-box">
+            <div className="temp">
               {" "}
-              Temperature: {data.getCityByName.weather.temperature.actual}
-            </h1>
-            <h1>
-              Description: {data.getCityByName.weather.summary.description}
-            </h1>
-            <h1>Wind Speed: {data.getCityByName.weather.wind.speed}</h1>
+              Temperature: {Math.round(data?.getCityByName?.weather.temperature.actual)}°
+            </div>
+            <div className="weather">
+            <p>
+              Weather: {data?.getCityByName?.weather.summary.description}
+            </p>
+            <p>Wind Speed: {data?.getCityByName?.weather.wind.speed}</p>
+            </div>
+            </div>
           </>
-        )}
+        ) : ('')}
       </div>
     </div>
   );
